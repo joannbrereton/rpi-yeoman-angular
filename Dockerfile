@@ -1,14 +1,12 @@
 # Yeoman with some generators and prerequisites
-FROM ubuntu:saucy
-MAINTAINER Kevin Littlejohn <kevin@littlejohn.id.au>
+# Adapted from Dockerfile maintained by  Kevin Littlejohn <kevin@littlejohn.id.au>
+#  
+FROM hypriot/rpi-node 
+MAINTAINER JoAnn Brereton <joann.brereton@gmail.com>
 RUN apt-get -yq update && apt-get -yq upgrade
 # Install pre-requisites
-RUN apt-get -yq install python-software-properties software-properties-common \
-                      python g++ make git ruby-compass libfreetype6
 # Install node.js, then npm install yo and the generators
-RUN add-apt-repository ppa:chris-lea/node.js -y \
-  && apt-get -yq update \
-  && apt-get -yq install nodejs \
+RUN npm install -g npm \
   && npm install yo -g \
   && npm install -g generator-webapp generator-angular
 # Add a yeoman user because grunt doesn't like being root
@@ -20,4 +18,4 @@ WORKDIR /home/yeoman
 # Expose the port
 EXPOSE 9000
 # Always run as the yeoman user
-CMD ['/bin/bash']
+CMD ['bash']
