@@ -8,19 +8,23 @@ Forked from [silarsis/yeoman project](https://github.com/silarsis/yeoman)
 
 1. [Download and Install Hypriot](http://blog.hypriot.com/getting-started-with-docker-on-your-arm-device/)
 
-2. `docker run -i -t brereton/rpi-yeoman-angular`
+2. `docker run -i -t -d --name yo brereton/rpi-yeoman-angular`
 
     (alternatively, build from github: `docker build -t="brereton/rpi-yeoman-angular" github.com/brereton/yeoman`)
 
 ### Usage
 
-`docker run -i -t brereton/rpi-yeoman-angular`
+`docker run -i -t -d --name yo brereton/rpi-yeoman-angular`
 
 This will run the container and log you in as the "yeoman" user, ready to "yo".
 
+To run another shell while the containing is running
+
+`docker exec -it yo bash`
+
 ### Notes
 
-"sudo" works - if you need root, `sudo -s` will get you there.
+"sudo" works inside this container - if you need root, `sudo -s` will get you there.
 
 The default grunt port (9000) is exposed by default.
 
