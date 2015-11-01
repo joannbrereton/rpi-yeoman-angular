@@ -8,7 +8,7 @@ Forked from [silarsis/yeoman project](https://github.com/silarsis/yeoman)
 
 1. [Download and Install Hypriot](http://blog.hypriot.com/getting-started-with-docker-on-your-arm-device/)
 
-2. `docker run -i -t brereton/rpi-yeoman-angularjs`
+2. `docker run -i -t brereton/rpi-yeoman-angular`
 
     (alternatively, build from github: `docker build -t="brereton/rpi-yeoman-angular" github.com/brereton/yeoman`)
 
