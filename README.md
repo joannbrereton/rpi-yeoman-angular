@@ -18,9 +18,21 @@ Forked from [silarsis/yeoman project](https://github.com/silarsis/yeoman)
 
 This will run the container and log you in as the "yeoman" user, ready to "yo".
 
-To run another shell while the containing is running
+3.  To run another shell while the container is running
 
 `docker exec -it yo bash`
+
+4.  Once inside the container, enter
+
+`yo angular`
+
+Answer the prompts, go get some coffee, read a book, paint your house,...when yo is done, enter the next two commands in your container.
+
+5.  `grunt build`
+
+6.  `grunt serve`
+
+7.  Visit `http://<your raspberry pi ip address>:9000` and you should see the famed Ahoy! message.
 
 ### Notes
 
