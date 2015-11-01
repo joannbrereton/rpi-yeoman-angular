@@ -4,6 +4,7 @@
 FROM hypriot/rpi-node 
 MAINTAINER JoAnn Brereton <joann.brereton@gmail.com>
 # Install pre-requisites
+RUN chmod 777 /usr/local/lib/node_modules/
 # Update npm.
 RUN npm install -g npm 
 # Install all the other npm pieces, grunt, bower, yo generators
