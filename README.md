@@ -18,10 +18,6 @@ Forked from [silarsis/yeoman project](https://github.com/silarsis/yeoman)
 
 This will run the container and log you in as the "yeoman" user, ready to "yo".
 
-`docker run -i -t brereton/rpi-yeoman-angular`
-
-This will run the grunt server inside the container.
-
 ### Notes
 
 "sudo" works - if you need root, `sudo -s` will get you there.
